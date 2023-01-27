@@ -63,11 +63,9 @@ btn.addEventListener("click", () => {
 //1
 function funcOne(e) {
   let count = 0;
-  if (e != rupee) {
     for (let i = 1; i <= e; i += 1) {
-      console.log(rupee + 1);
       note1.innerHTML = `<h2>1: ${count++ + 1}</h2>`;
-    }
+    
   }
 }
 
