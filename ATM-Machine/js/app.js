@@ -62,7 +62,6 @@ btn.addEventListener("click", () => {
 
 //1
 function funcOne(e) {
-  let rupee = 0;
   let count = 0;
   if (e != rupee) {
     for (let i = 1; i <= e; i += 1) {
@@ -74,11 +73,8 @@ function funcOne(e) {
 
 //2
 function funcTwo(e) {
-  let rupee = 0;
   let count = 0;
-
   for (let i = 2; i <= e; i += 2) {
-    console.log(rupee + 2);
     note2.innerHTML = `<h2>2: ${count++ + 1}</h2>`;
     var remainingBalanceTwo = e - i;
   }
@@ -90,11 +86,8 @@ function funcTwo(e) {
 
 //5
 function funcFive(e) {
-  let rupee = 0;
   let count = 0;
-
   for (let i = 5; i <= e; i += 5) {
-    console.log(rupee + 5);
     note5.innerHTML = `<h2>5: ${count++ + 1}</h2>`;
     var remainingBalanceFive = e - i;
   }
@@ -106,10 +99,8 @@ function funcFive(e) {
 
 //10
 function funcTen(e) {
-  let rupee = 0;
   let count = 0;
   for (let i = 10; i <= e; i += 10) {
-    console.log(rupee + 10);
     note10.innerHTML = `<h2>10: ${count++ + 1}</h2>`;
     var remainingBalanceTen = e - i;
   }
@@ -120,12 +111,9 @@ function funcTen(e) {
 
 //20
 function funcTwenty(e,p) {
-  let rupee = 0;
   let count = 0;
-
   for (let i = +p||20; i <= e; i += +p||20) {
     if (p != 'null' && p != undefined) {
-    console.log(rupee + +p||20);
     note20.innerHTML = `<h2>${p}: ${count++ + 1}</h2>`;
     var remainingBalanceTwenty = e - i;
     if (count  == 200) {
@@ -147,11 +135,9 @@ function funcTwenty(e,p) {
 
 //50
 function funcFifty(e, p) {
-  let rupee = 0;
   let count = 0;
   for (let i = +p||50; i <= e; i += +p||50) {
     if (p != 'null' && p != undefined) {
-    console.log(rupee + +p||50);
     note50.innerHTML = `<h2>${p}: ${count++ + 1}</h2>`;
     var remainingBalanceFifty = e - i;
     if (count  == 200) {
@@ -173,11 +159,9 @@ function funcFifty(e, p) {
 
 //100
 function funcHundred(e,p) {
-  let rupee = 0;
   let count = 0;
   for (let i = +p||100; i <= e; i += +p||100) {
     if (p != 'null' && p != undefined) { 
-      console.log(rupee + +p||100);
       note100.innerHTML = `<h2>${p}: ${count++ + 1}</h2>`;
       var remainingBalanceHundred = e - i;
       if (count  == 200) {
@@ -199,12 +183,10 @@ function funcHundred(e,p) {
 
 //500
 function funcFivehundred(e,p) {
-  let rupee = 0;
   let count = 0;
 
   for (let i = +p||500; i <= e; i += +p||500) {
     if (p != 'null' && p!= undefined) { 
-    console.log(rupee + +p||500);
     note500.innerHTML = `<h2>${p}: ${count++ + 1}</h2>`;
     var remainingBalanceFivehundred = e - i;
     if (count  == 200) {
@@ -226,11 +208,9 @@ function funcFivehundred(e,p) {
 
 //1000
 function funcThousand(e,p) {
-  let rupee = 0;
   let count = 0;
   for (let i = +p||1000; i <= e; i += +p||1000) {
     if(p != 'null' && p != undefined){
-      console.log(rupee + +p||1000);
       note1000.innerHTML = `<h2>${p}: ${count++ + 1}</h2>`;
       var remainingBalanceThousand = e - i;
       if (count  == 200) {
@@ -252,11 +232,9 @@ function funcThousand(e,p) {
 
 //5000
 function funcFivethousand(e,p) {
-  let rupee = 0;
   let count = 0;
   for (let i = +p||5000; i <= e; i += +p||5000) {
     if (p != 'null') {
-      console.log(rupee + +p||5000);
       note5000.innerHTML = `<h2>${p}: ${count++ + 1}</h2>`;
       var remainingBalanceFivethousand = e - i;
       if (count  == 200) {
