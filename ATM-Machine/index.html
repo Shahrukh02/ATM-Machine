@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>ATM Machine</title>
+  </head>
+  <body>
+    <div class="user">
+      <input type="number" id="user" class="input" />
+      <button id="btn">Click</button>
+    </div>
+
+    <div class="preferred_container">
+      <h2>Note preferred</h2>
+      <input
+        type="radio"
+        name="preferred"
+        onclick="valueCheck()"
+        class="notes"
+        id=""
+        value="10"
+      />10<br />
+      <input
+        type="radio"
+        name="preferred"
+        onclick="valueCheck()"
+        class="notes"
+        id=""
+        value="20"
+      />20<br />
+      <input
+        type="radio"
+        name="preferred"
+        onclick="valueCheck()"
+        class="notes"
+        id=""
+        value="50"
+      />50<br />
+      <input
+        type="radio"
+        name="preferred"
+        onclick="valueCheck()"
+        class="notes"
+        id=""
+        value="100"
+      />100<br />
+      <input
+        type="radio"
+        name="preferred"
+        onclick="valueCheck()"
+        class="notes"
+        id=""
+        value="500"
+      />500<br />
+      <input
+        type="radio"
+        name="preferred"
+        onclick="valueCheck()"
+        class="notes"
+        id=""
+        value="1000"
+      />1000<br />
+      <input
+        type="radio"
+        name="preferred"
+        onclick="valueCheck()"
+        class="notes"
+        id=""
+        value="5000"
+      />5000<br />
+      <button id="reset">Reset radio Button</button>
+    </div>
+
+    <div class="currency">
+      <h1 style="text-align: center;">Your currency</h1>
+      <div class="list_notes" id="note5000"></div>
+      <div class="list_notes" id="note1000"></div>
+      <div class="list_notes" id="note500"></div>
+      <div class="list_notes" id="note100"></div>
+      <div class="list_notes" id="note50"></div>
+      <div class="list_notes" id="note20"></div>
+      <div class="list_notes" id="note10"></div>
+      <div class="list_notes" id="note5"></div>
+      <div class="list_notes" id="note2"></div>
+      <div class="list_notes" id="note1"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
