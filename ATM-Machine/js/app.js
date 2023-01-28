@@ -13,51 +13,63 @@ let note500 = document.getElementById("note500");
 let note1000 = document.getElementById("note1000");
 let note5000 = document.getElementById("note5000");
 
+var prefferedValue
 let allRadioBtn = document.querySelectorAll(".notes");
 reset.addEventListener("click", () => {
   allRadioBtn.forEach((e) => {
     if (e.checked) {
       e.checked = false;
     }
-    localStorage.setItem("prefferedValue", null);
+    prefferedValue = null
   });
 });
 
 function valueCheck() {
   allRadioBtn.forEach((e) => {
     if (e.checked) {
-      let value = e.value;
-      localStorage.setItem("prefferedValue", value);
+      prefferedValue = e.value;
     }
   });
 }
 
+
 btn.addEventListener("click", () => {
-  let getPrefferedValue = localStorage.getItem("prefferedValue");
+  //claer html
+  note1.innerHTML=''
+  note2.innerHTML=''
+  note5.innerHTML=''
+  note10.innerHTML=''
+  note20.innerHTML=''
+  note50.innerHTML=''
+  note100.innerHTML=''
+  note500.innerHTML=''
+  note1000.innerHTML=''
+  note5000.innerHTML=''
+
   if (userValue.value <= 1) {
-    funcOne(userValue.value, getPrefferedValue);
+    funcOne(userValue.value,prefferedValue);
   } else if (userValue.value <= 4 && userValue.value >= 2) {
-    funcTwo(userValue.value, getPrefferedValue);
+    funcTwo(userValue.value,prefferedValue);
   } else if (userValue.value <= 9 && userValue.value >= 5) {
-    funcFive(userValue.value, getPrefferedValue);
+    funcFive(userValue.value,prefferedValue);
   } else if (userValue.value <= 19 && userValue.value >= 10) {
-    funcTen(userValue.value, getPrefferedValue);
+    funcTen(userValue.value,prefferedValue);
   } else if (userValue.value <= 49 && userValue.value >= 20) {
-    funcTwenty(userValue.value, getPrefferedValue);
+    funcTwenty(userValue.value,prefferedValue);
   } else if (userValue.value <= 99 && userValue.value >= 50) {
-    funcFifty(userValue.value, getPrefferedValue);
+    funcFifty(userValue.value,prefferedValue);
   } else if (userValue.value <= 499 && userValue.value >= 100) {
-    funcHundred(userValue.value, getPrefferedValue);
+    funcHundred(userValue.value,prefferedValue);
   } else if (userValue.value <= 999 && userValue.value >= 500) {
-    funcFivehundred(userValue.value, getPrefferedValue);
+    funcFivehundred(userValue.value,prefferedValue);
   } else if (userValue.value <= 4999 && userValue.value >= 1000) {
-    funcThousand(userValue.value, getPrefferedValue);
+    funcThousand(userValue.value,prefferedValue);
   } else if (userValue.value <= 1000000 && userValue.value >= 5000) {
-    funcFivethousand(userValue.value, getPrefferedValue);
+    funcFivethousand(userValue.value,prefferedValue);
   } else {
     alert("10 lakh tk i nikal skty ho bhai");
   }
-  localStorage.setItem('prefferedValue',null)
+  prefferedValue = null
 });
 
 //1
